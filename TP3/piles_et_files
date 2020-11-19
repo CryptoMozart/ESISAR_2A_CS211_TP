@@ -1,0 +1,1098 @@
+
+<!DOCTYPE html>
+<html class="no-js " lang="fr" prefix="og: http://ogp.me/ns#">
+<head>
+<title>
+                            Les piles et les files - Apprenez à programmer en C ! - OpenClassrooms
+                    </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"90dc06697a",applicationID:"20302107"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="application-name" content="OpenClassrooms" />
+<meta name="msapplication-TileColor" content="#7451eb" />
+<meta name="msapplication-TileImage" content="/fav-icon.png?v=3" />
+<meta name="theme-color" content="#7451eb">
+<meta property="og:locale" content="fr_FR" />
+<link rel="icon" sizes="144x144" href="/fav-icon.png?v=3">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
+<link rel="apple-touch-icon" href="/apple-touch-icon-iphone.png?v=3" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-ipad.png?v=3" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-iphone-retina-display.png?v=3" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-ipad-retina-display.png?v=3" />
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=3" />
+<link rel="shortcut icon" href="/favicon.ico?d7aa84d" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+          window.dataLayer = window.dataLayer || [];
+
+          (function(a,s,y,n,c,h,i,d,e){
+            var isEnabled = [
+              /\/paths/,
+              /\/apprenticeship/,
+              /\/employer/,
+            ].reduce(function (acc, pathReg) {
+                var matchUrl = !!document.location.pathname.match(pathReg);
+                return acc || matchUrl;
+            }, false);
+
+            if (!isEnabled) {
+              return;
+            }
+
+            s.className+=' '+y;
+            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+          })(window,document.documentElement,'async-hide','dataLayer',2000,{'GTM-5WM9PV':true});
+        </script>
+<link href="/bundles/common/css/master-eee9b788.css" type="text/css" rel="stylesheet" media="all" />
+<link href="/bundles/course/css/main-a5640a83.css" type="text/css" rel="stylesheet" media="all" />
+<link href="https://vjs.zencdn.net/6.2.5/video-js.css" rel="stylesheet">
+<script>
+    /*! modernizr 3.3.1 (Custom Build) | MIT *
+    * https://modernizr.com/download/?-cssfilters-touchevents-setclasses !*/
+    !function(e,n,t){function o(e,n){return typeof e===n}function r(){var e,n,t,r,s,i,a;for(var l in C)if(C.hasOwnProperty(l)){if(e=[],n=C[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=r:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=r),g.push((r?"":"no-")+a.join("-"))}}function s(e){var n=w.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?w.className.baseVal=n:w.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(){var e=n.body;return e||(e=i(x?"svg":"body"),e.fake=!0),e}function l(e,t,o,r){var s,l,u,f,p="modernizr",c=i("div"),d=a();if(parseInt(o,10))for(;o--;)u=i("div"),u.id=r?r[o]:p+(o+1),c.appendChild(u);return s=i("style"),s.type="text/css",s.id="s"+p,(d.fake?d:c).appendChild(s),d.appendChild(c),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),c.id=p,d.fake&&(d.style.background="",d.style.overflow="hidden",f=w.style.overflow,w.style.overflow="hidden",w.appendChild(d)),l=t(c,e),d.fake?(d.parentNode.removeChild(d),w.style.overflow=f,w.offsetHeight):c.parentNode.removeChild(c),!!l}function u(e,n){return!!~(""+e).indexOf(n)}function f(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function p(e,n){return function(){return e.apply(n,arguments)}}function c(e,n,t){var r;for(var s in e)if(e[s]in n)return t===!1?e[s]:(r=n[e[s]],o(r,"function")?p(r,t||n):r);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function m(n,o){var r=n.length;if("CSS"in e&&"supports"in e.CSS){for(;r--;)if(e.CSS.supports(d(n[r]),o))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];r--;)s.push("("+d(n[r])+":"+o+")");return s=s.join(" or "),l("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function h(e,n,r,s){function a(){p&&(delete k.style,delete k.modElem)}if(s=o(s,"undefined")?!1:s,!o(r,"undefined")){var l=m(e,r);if(!o(l,"undefined"))return l}for(var p,c,d,h,v,y=["modernizr","tspan","samp"];!k.style&&y.length;)p=!0,k.modElem=i(y.shift()),k.style=k.modElem.style;for(d=e.length,c=0;d>c;c++)if(h=e[c],v=k.style[h],u(h,"-")&&(h=f(h)),k.style[h]!==t){if(s||o(r,"undefined"))return a(),"pfx"==n?h:!0;try{k.style[h]=r}catch(g){}if(k.style[h]!=v)return a(),"pfx"==n?h:!0}return a(),!1}function v(e,n,t,r,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+j.join(i+" ")+i).split(" ");return o(n,"string")||o(n,"undefined")?h(a,n,r,s):(a=(e+" "+E.join(i+" ")+i).split(" "),c(a,n,t))}function y(e,n,o){return v(e,t,t,n,o)}var g=[],C=[],S={_version:"3.3.1",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){C.push({name:e,fn:n,options:t})},addAsyncTest:function(e){C.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var w=n.documentElement,x="svg"===w.nodeName.toLowerCase(),_=S._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];S._prefixes=_;var b="CSS"in e&&"supports"in e.CSS,T="supportsCSS"in e;Modernizr.addTest("supports",b||T);var z=S.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",_.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");z(o,function(e){t=9===e.offsetTop})}return t});var P="Moz O ms Webkit",j=S._config.usePrefixes?P.split(" "):[];S._cssomPrefixes=j;var E=S._config.usePrefixes?P.toLowerCase().split(" "):[];S._domPrefixes=E;var N={elem:i("modernizr")};Modernizr._q.push(function(){delete N.elem});var k={style:N.elem.style};Modernizr._q.unshift(function(){delete k.style}),S.testAllProps=v,S.testAllProps=y,Modernizr.addTest("cssfilters",function(){if(Modernizr.supports)return y("filter","blur(2px)");var e=i("a");return e.style.cssText=_.join("filter:blur(2px); "),!!e.style.length&&(n.documentMode===t||n.documentMode>9)}),r(),s(g),delete S.addTest,delete S.addAsyncTest;for(var A=0;A<Modernizr._q.length;A++)Modernizr._q[A]();e.Modernizr=Modernizr}(window,document);
+    </script>
+<script type="text/javascript">
+    var App = {
+        startTime: (new Date()).getTime(),
+        pageGenerationDate: 1573298043000
+    };
+
+    App.user = {
+                    locale: 'fr',
+            language: 'fr',
+            isPremium: 'false',
+            isMentor: 'false',
+            anonymous: 'true'
+            };
+
+    App.preferences = {
+        debug: false,
+        assetVersion: 'd7aa84d',
+        contactMail: 'hello\u0040openclassrooms.com',
+        contactPhone: '\u002B33\u00201\u002080\u002088\u002080\u002030',
+        phoneNumbersByCountry: {"uk":{"contact":"+44 16 1768 1880"},"ca":{"contact":"+1 929-376-0101"},"us":{"contact":"+1 929-376-0101"},"fr":{"contact":"+33 1 80 88 80 30","b2b_contact":"+33 1 80 88 80 40"},"es":{"contact":"+33 1 80 88 80 30"}},
+        adyenPublicKey: '10001\u007C889EBFD4D434B82683E21DCA26E77C3E20E0EE09A5ECE3830B0ED51F2FA721A2F7E9EC871C6AB9A1E12C4492F4717673047757E02C5256D8E265CD51E413E5EFCCFEAC41B39C662A424ADC13EE187C38C372A7FCCEC1EA5DF841989437D78B252A8EB51008E60BB55B1E55A7A80DE1A9D60D998C128A576BFAE1DDB97D514AF0A073AEDDE84CEE40D1F8F6ECE85D0FFA50C95C06DB274021C1371376C6EB16561FD65C5E2704B570A7504D617D0F3820F176A0609F6162BDF5890533289FDC3DA7DB03B50BB3BD60A613E1FF72060F22987627E8F1A29F0128A94EC4C8FF7CF6B7AB9558D8433BF86D7A388AB927641CD6C02689139CEE3AAC9ACBFFE83806CB',
+        cdnImage: true,
+        layer: {
+            appId: 'layer\u003A\/\/\/apps\/staging\/7757c53a\u002Db2ba\u002D11e5\u002Db2a6\u002D2584730b1501',
+            identityProviderUrl: '\/ajax\/conversations\/get\u002Didentity\u002Dtoken'
+        },
+        algolia: {
+            appId: 'JGRXRFVQM0',
+            apiKey: 'cd1e2696005d97e99dc7b882297b09cf',
+            indexName: 'prod_v2_COURSES_fr'
+        },
+        google: {
+            appId: '132418960718\u002Djdnmpug3g9e6ub2p41ergcci1492qh82.apps.googleusercontent.com',
+            maps: {
+                apiKey: 'AIzaSyDQKLz54HFMtUf9Yo8cWkgR8Af3eU2HAiE'
+            },
+        },
+        application: {
+            googleForm: {
+              funnelUrl: 'https\u003A\/\/docs.google.com\/forms\/d\/e\/1FAIpQLScBRRimATSOJGW9Af\u002DDifIkzpXwvGRZEnIdxH7dcSiadjYCxQ\/formResponse',
+              fields: {"firstname":"entry.336110006","lastname":"entry.994821149","email":"entry.944181070","path_id":"entry.207247512","path_category_id":"entry.2119822715","consent":"entry.1541801802","user_locale":"entry.2127604397","userId":"entry.29878360","gender":"entry.114162226","diploma_level":"entry.513429021","language_proficiency_fr":"entry.2112993571","language_proficiency_en":"entry.622935801","ha_google_place_id":"entry.1048707629","ha_addressline_1":"entry.694389504","ha_city":"entry.212574166","ha_zip_code":"entry.179816654","ha_state":"entry.175591718","ha_country":"entry.540542428","ha_longitude":"entry.1240719233","ha_latitude":"entry.1673918511","professional_status":"entry.1977816976","disabled_worker":"entry.1666989190","veteran":"entry.485570822","athlete":"entry.639827067","refugee":"entry.1506421983","rsa":"entry.1773932570","can_work_in_france":"entry.672900422","online_cv":"entry.1625514336","work_location":"entry.1064429460","career_motivation":"entry.453936061","has_computer":"entry.1607977565","has_mic_webcam":"entry.2077820102","has_fast_internet_connection":"entry.352837916","has_quiet_space":"entry.1717297539"}
+            },
+        },
+        facebook: {
+            appId: '277769842283905',
+        },
+        routes: {
+            COURSE_EVENT: '/components/courses/:courseId',
+            COURSE_PART_EVENT: '/components/courses/:courseId/parts/:partId',
+
+            ACCEPT_COOKIE: '\/ajax\/components\/user\u002Daccept\u002Dconsent\u002Dcookie'
+        },
+
+                    };
+
+    App.preferences.navigationPreference = {
+            };
+
+    App.preferences.modules = {
+        'smiley': {
+            basePath: '/bundles/common/images/smiley/'
+        }
+    };
+
+    try {
+        App.api = JSON.parse("\u007B\u0022anonymous\u0022\u003A\u007B\u0022client_id\u0022\u003A\u0022807605274673228623802113\u0022,\u0022client_secret\u0022\u003A\u00221\u0022\u007D,\u0022logged\u0022\u003A\u007B\u0022client_id\u0022\u003A\u00227xPFDY3bB3ruX44z\u0022\u007D,\u0022urls\u0022\u003A\u007B\u0022authorize\u0022\u003A\u0022https\u003A\\\/\\\/openclassrooms.com\\\/oauth2\\\/authorize\u0022,\u0022root\u0022\u003A\u0022https\u003A\\\/\\\/api.openclassrooms.com\u0022\u007D\u007D");
+    } catch (e) {
+        App.api = {};
+    }
+
+    App.notifications = {};
+    App.scripts = [];
+
+    if (App.user.id) {
+        (function(){
+            var userData = { userId: App.user.id };
+
+            if (App.user.premiumType) {
+                userData.status = (App.user.premiumType === 'Premium Solo') ? 'premium solo student' : 'path student';
+            } else {
+                userData.status = 'free student';
+            }
+
+            if (App.user.isMentor) {
+                userData.status = App.user.premiumType ? (userData.status + '|mentor') : 'mentor';
+            }
+
+            if (!window.dataLayer) {
+              return;
+            }
+            window.dataLayer.push(userData);
+        })();
+    }
+</script>
+<script>    
+    App.preferences.modules['course/view/internalFolding'] = {
+        isBigCourse: true
+    };
+
+    App.data = App.data || {};
+App.data.currentCourse = {"partId":19868,"partTitle":"Les piles et les files","partSlug":"les-piles-et-les-files","courseId":19980,"courseTitle":"Apprenez \u00e0 programmer en C !","courseSlug":"apprenez-a-programmer-en-c","courseLanguage":"fr","isIntroduction":false,"isCertifying":true};
+App.preferences.modules['view/currentCoursePage'] = App.data.currentCourse;
+
+</script>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Les piles et les files" />
+<meta property="og:url" content="https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19868-les-piles-et-les-files" />
+<meta property="og:site_name" content="OpenClassrooms" />
+<meta property="og:image" content="https://course.oc-static.com/courses/19980/19980_teaser_picture_1522246734.jpg" />
+<meta property="og:description" content="Le C est un langage incontournable qui en a inspiré beaucoup d&#039;autres. Inventé dans les années 70, il est toujours d&#039;actualité dans la programmation système et la robotique. Il est plutôt complexe, mais si vous le maîtrisez vous aurez des bases de programmation très solides !" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@OCFrance" />
+<meta name="twitter:title" content="Les piles et les files" />
+<meta name="twitter:image" content="https://course.oc-static.com/courses/19980/19980_teaser_picture_1522246734.jpg" />
+<meta name="twitter:description" content="Le C est un langage incontournable qui en a inspiré beaucoup d&#039;autres. Inventé dans les années 70, il est toujours d&#039;actualité dans la programmation système et la robotique. Il est plutôt complexe, mais si vous le maîtrisez vous aurez des bases de programmation très solides !" />
+<link rel="canonical" href="https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/19868-les-piles-et-les-files" />
+</head>
+<body class="course oc-body   breadcrumbFluid breadcrumbOnContrasted">
+<ul class="skipLink">
+<li>
+<a class="skipLink__item" href="#mainContent">Aller au contenu</a>
+</li>
+<li>
+<a class="skipLink__item" href="#footerChangeLanguage">Choisir la langue</a>
+</li>
+<li>
+<a class="skipLink__item" href="#algolia-search-input">Aller à la recherche</a>
+</li>
+</ul>
+<script id="_EVENTS-IDENTIFY" type="application/json">
+        </script>
+<script id="_EVENTS-PAGE" type="application/json">
+        {"type":"page","integrations":{"Blueshift":false,"HubSpot":false},"properties":{"pageCategory":"courses","courseTitle":"Apprenez \u00e0 programmer en C !"}}
+    </script>
+<div id="predictiveCrmTopBanner"></div>
+<div id="oc-header">
+<div class="oc-mainHeader oc-mainHeader--notLogged oc-mainHeader--skeleton">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div style="display: flex;">
+<div class="oc-mainHeaderLogo oc-mainHeaderLogo--skeleton">
+<a href="/fr" class="oc-mainHeaderLogo__link">
+<svg fill="none" height="51" width="668" viewBox="0 0 668 51" xmlns="http://www.w3.org/2000/svg">
+<title>OpenClassrooms.com</title>
+<path d="M406.011 35.018c0 2.82-.71 5.641-2.368 7.991-1.659 2.35-3.79 4.23-6.87 5.64-3.079 1.41-6.869 2.116-11.37 2.116-3.79 0-7.343-.47-10.897-1.41-3.553-.94-6.395-2.35-8.527-3.996l7.106-8.46c1.421.705 2.843 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.711 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.369.94 4.264 2.35 6.159 4.23 1.658 1.646 2.605 4.466 2.605 7.756zm261.989 0c0 2.82-.711 5.641-2.369 7.991s-3.79 4.23-6.869 5.64c-3.08 1.41-6.87 2.116-11.371 2.116-3.79 0-7.343-.47-10.896-1.41s-6.396-2.35-8.528-3.996l7.107-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.053 1.41 4.975 0 7.581-1.41 7.581-3.995 0-1.41-.711-2.35-2.132-3.056-1.422-.705-3.791-1.41-6.87-2.115a49.361 49.361 0 0 1-8.764-2.585c-2.369-.94-4.264-2.35-6.159-4.23-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.869-5.64 3.08-1.41 6.87-2.116 11.371-2.116 3.079 0 6.158.47 9.001 1.175 3.079.705 5.685 1.88 7.817 3.055l-7.343 8.696c-3.317-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.896 1.88-1.896 3.056 0 1.41.711 2.35 2.132 2.82 1.422.705 3.791 1.41 6.87 2.115a49.361 49.361 0 0 1 8.764 2.585c2.369.94 4.264 2.35 6.159 4.23 1.895 1.646 2.606 4.466 2.606 7.756zM87.882 19.037c0 3.76-.947 6.816-2.605 9.4-1.659 2.586-4.027 4.701-7.107 6.111s-6.87 2.116-10.896 2.116H59.22v12.69H45.955V.706h21.319c4.264 0 7.817.705 10.896 2.115 3.08 1.41 5.448 3.526 7.107 6.346 1.895 3.055 2.605 6.346 2.605 9.87zm-13.265 0c0-2.35-.71-3.995-2.132-5.17s-3.316-1.88-6.159-1.88h-7.343v14.336h7.343c2.606 0 4.738-.706 6.16-1.88s2.131-3.056 2.131-5.406zm55.904 20.212v10.576h-37.19V1.175h36.242v10.576h-23.214v8.226h18.476v10.341h-18.476v8.93zm50.218-38.074v48.65h-10.896l-20.609-25.853v25.853h-13.028V1.175h10.896l20.609 25.853V1.175zm84.092 37.604v10.81h-32.926V.94h13.265v37.604h19.661zm56.851 11.046h-13.739l-3.553-9.401h-19.661l-3.553 9.4h-13.502l20.608-48.649h13.029zM300.6 30.083l-5.922-15.512-5.922 15.512zm62.536 4.935c0 2.82-.71 5.641-2.369 7.991-1.658 2.35-3.79 4.23-6.869 5.64-3.08 1.41-6.87 2.116-11.37 2.116-3.79 0-7.344-.47-10.897-1.41s-6.396-2.35-8.527-3.996l7.106-8.46c1.421.705 2.842 1.175 4.501 1.88 2.842.94 5.448 1.41 8.054 1.41 4.974 0 7.58-1.41 7.58-3.995 0-1.41-.711-2.35-2.132-3.056-1.421-.705-3.79-1.41-6.87-2.115-3.553-.705-6.395-1.645-8.764-2.585s-4.264-2.35-6.159-4.23c-1.658-1.88-2.606-4.701-2.606-7.991 0-3.056.711-5.641 2.369-7.991 1.658-2.35 3.79-4.23 6.87-5.64 3.079-1.41 6.869-2.116 11.37-2.116 3.079 0 6.159.47 9.001 1.175 3.08.705 5.448 1.88 7.817 3.055l-7.343 8.696c-3.316-1.41-6.633-2.115-9.712-2.115-2.606 0-4.501.47-5.685 1.175-1.185.705-1.895 1.88-1.895 3.056 0 1.41.71 2.35 2.132 2.82 1.421.705 3.79 1.41 6.869 2.115a49.4 49.4 0 0 1 8.765 2.585c2.368.94 4.263 2.35 6.158 4.23 1.659 1.646 2.606 4.466 2.606 7.756zm-322.63-9.636c0 13.867-11.37 25.383-25.583 25.383-5.685 0-10.66-1.88-14.923-4.936l8.528-10.105c1.895 1.175 4.027 1.88 6.395 1.88 6.633 0 12.081-5.406 12.081-11.986 0-6.581-5.448-11.987-12.08-11.987-2.37 0-4.501.705-6.396 1.88L0 5.407C4.264 2.35 9.475.47 14.923.47 29.136.235 40.506 11.516 40.506 25.383zm177.66 10.341l8.528 10.107c-4.264 3.055-9.476 4.935-14.924 4.935-13.976 0-25.583-11.281-25.583-25.383C186.187 11.517 197.557 0 211.77 0c5.685 0 10.66 1.88 14.924 4.936l-8.528 10.105c-1.895-1.175-4.027-1.88-6.396-1.88-6.632 0-12.081 5.406-12.081 11.986 0 6.581 5.449 11.987 12.081 11.987 2.369.47 4.501-.235 6.396-1.41zm236.169 14.102l-10.423-15.042c3.079-1.41 5.211-3.525 6.87-6.11 1.658-2.585 2.605-5.876 2.605-9.401 0-3.76-.947-6.816-2.605-9.636-1.659-2.82-4.027-4.7-7.107-6.346-3.079-1.41-6.869-2.115-10.896-2.115H411.46v48.65h13.028V37.134h6.159l8.764 12.69zm-29.847-37.839h7.58c2.606 0 4.738.705 6.159 1.88s2.132 3.056 2.132 5.17c0 2.351-.711 3.996-2.132 5.171s-3.316 1.88-6.159 1.88h-7.58zM483.945.235c13.976 0 25.583 11.281 25.583 25.382S498.157 51 483.945 51c-13.976 0-25.583-11.281-25.583-25.383S469.732.235 483.945.235zm-13.029 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-6.87 0-12.792 5.64-12.792 12.69zM538.901.235c13.976 0 25.583 11.281 25.583 25.382S553.114 51 538.901 51c-13.976 0-25.583-11.281-25.583-25.383S524.925.235 538.901.235zm-12.792 25.147c0 7.051 5.685 12.692 12.792 12.692 7.106 0 12.791-5.64 12.791-12.692s-5.685-12.69-12.791-12.69c-7.107 0-12.792 5.64-12.792 12.69zm70.353 6.816L580.828 1.175h-10.896v48.65h11.607V28.438l11.607 21.387h6.87l11.607-21.387v21.387h11.607V1.175h-10.897z" />
+</svg>
+</a>
+</div>
+<nav class="oc-mainHeader__navWrapper" role="navigation" aria-label="Menu principal">
+<div class="oc-mainHeader__linksWrapper">
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Paths" href="/fr/paths">Parcours</a></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Courses" href="/fr/courses">Cours</a></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Apprenticeship" href="/fr/apprenticeship">Alternance</a></div>
+<div class="oc-mainHeader__navLinkWrapper--separator"></div>
+<div class="oc-mainHeader__navLinkWrapper"><a class="oc-mainHeader__navLink" data-event="click|Header|Business" href="/fr/business">Business</a></div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--[if lt IE 10]>
+<div class="alertMessage">
+    <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+    <p class="alertMessage__text">
+        Vous utilisez un navigateur obsolète, veuillez le <a href="https://browser-update.org/update.html">mettre à jour</a>.
+    </p>
+</div>
+<![endif]-->
+
+<div id="ie-ten-disclaimer" class="alertMessage" style="display:none">
+<span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+<p class="alertMessage__text">
+Vous utilisez un navigateur obsolète, veuillez le <a href="https://browser-update.org/update.html">mettre à jour</a>.
+</p>
+</div>
+<script>
+  if (document.documentMode === 10) {
+    document.getElementById('ie-ten-disclaimer').style.display = 'block';
+  }
+</script>
+
+<noscript>
+    <div class="alertMessage">
+        <span class="bullet bullet--small bullet--orange alertMessage__icon"> <i class="icon-exclamation"></i></span>
+        <p class="alertMessage__text">
+            Veuillez utiliser un <a href="https://browser-update.org/update.html">navigateur internet moderne</a> avec JavaScript activé pour naviguer sur OpenClassrooms.com
+        </p>
+    </div>
+</noscript>
+<div id="mainSearchLegacy" class="mainSearch"></div>
+<div id="mainContentWithHeader">
+<section class="breadcrumb  inset no-padding">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<nav class="breadcrumb__wrapper" role="navigation" aria-label="Fil d&#039;Ariane">
+<ul class="breadcrumb__trail">
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="https://openclassrooms.com/fr/" itemprop="url">
+ <span itemprop="title">Accueil</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="https://openclassrooms.com/fr/courses" itemprop="url">
+<span itemprop="title">Cours</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<a class="breadcrumb__link" href="https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c?status=published" itemprop="url">
+<span itemprop="title">Apprenez à programmer en C !</span
+                                    ></a>
+<span class="breadcrumb__separator"> > </span>
+</li>
+<li class="breadcrumb__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+Les piles et les files
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+<div id="pre-main-part">
+</div>
+<main class="claire clearfix" role="main" id="mainContent">
+<article itemscope itemtype="http://schema.org/Article" lang="fr">
+<header id="course-header" class="courseHeader" xmlns="http://www.w3.org/1999/html">
+<div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__topPart"><a itemprop="url" href="/fr/courses/19980-apprenez-a-programmer-en-c"><h1 class="oc-typography-h2 typoColorOnContrastedBg  courseHeader__title" data-course-title="Apprenez à programmer en C !">Apprenez à programmer en C !</h1></a></div></div></div></div><div class="grid-wrapper"><div class="grid-inner"><div class="grid-inner-content"><div class="courseHeader__bottomPart"><div class="courseHeader__details"><div class="courseHeader__detailsGroup"><ul class="courseHeader__detailsList"><li class="courseHeader__detailsItem"><img class="courseHeader__icon js-tooltip" src="/images/icons/schedule.svg?d7aa84d" width="16" title="Ce cours demande en moyenne 40 heures de travail pour être réussi." /><span class="courseHeader__label">40 heures</span></li><li class="courseHeader__detailsItem"><i class="icon-level courseHeader__icon"></i><span class="courseHeader__label">Moyenne</span></li></ul></div><div class="courseHeader__detailsGroup courseHeader--license"><a class="courseHeader__license" target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0"><span class="courseHeader__label">Licence</span><ul class="courseHeader__detailsList"><li class="iconBar__item"><i class="icon-cc iconBar__icon" title="CC"></i></li><li class="iconBar__item"><i class="icon-ccby iconBar__icon" title="BY"></i></li><li class="iconBar__item"><i class="icon-ccsa iconBar__icon" title="SA"></i></li></ul></a></div></div></div></div></div></div>
+<div id="popin-formats-availables" class="popin popin--course-formats-availables">
+<i class="popin__close-button icon-close js-close-button"></i>
+<div class="course-types course-types--withSpace">
+<a class="course-types__item" href="/fr/courses/19980-apprenez-a-programmer-en-c">
+<i class="icon-desktop course-types__icon"></i>
+</a>
+<a class="course-types__item" href="http://www.eyrolles.com/Informatique/Livre/apprenez-a-programmer-en-c-2e-edition-9791090085879?societe=openclassrooms">
+<i class="icon-book course-types__icon"></i>
+</a>
+<a class="course-types__item" href="/fr/courses/19980/certificate_example" target="_blank">
+<i class="icon-badge course-types__icon js-close-button"></i>
+</a>
+<a class="course-types__item" href="/fr/premium#discover-premium-plus-offer">
+<i class="icon-mentor course-types__icon"></i>
+</a>
+</div>
+<p>Ce cours est visible <a href="/fr/courses/19980-apprenez-a-programmer-en-c">gratuitement en ligne</a>.</p>
+<p>
+Ce cours existe en livre papier.
+</p>
+<p>
+course.header.alt.is_certifying
+</p>
+<p>
+Vous pouvez être <a href="/fr/premium#discover-premium-plus-offer">accompagné et mentoré par un professeur particulier</a> par visioconférence sur ce cours.
+</p>
+<a class="button button--primary js-close-button" href="#">J&#039;ai tout compris !</a>
+</div>
+</header>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<p class="courseHeader__updatedTime">
+Mis à jour le 29/07/2019 </p>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content">
+<nav id="course-timeline" class="timeline">
+<div class="timeline__inner">
+<span class="timeline__iconContainer">
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c" title="Retour sur le sommaire du cours" class="roundIcon timeline__roundIcon">
+<i class="icon-home roundIcon__icon"></i>
+</a>
+</span>
+<div class="timeline__steps">
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/13300-vous-avez-dit-programmer" class="timeline__step" title="Vous avez dit programmer ?">
+<span class="timeline__stepName">
+Vous avez dit programmer ?
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/13522-ayez-les-bons-outils" class="timeline__step" title="Ayez les bons outils !">
+<span class="timeline__stepName">
+Ayez les bons outils !
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/13746-votre-premier-programme" class="timeline__step" title="Votre premier programme">
+<span class="timeline__stepName">
+Votre premier programme
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/14118-un-monde-de-variables" class="timeline__step" title="Un monde de variables">
+<span class="timeline__stepName">
+Un monde de variables
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/14337-une-bete-de-calcul" class="timeline__step" title="Une bête de calcul">
+<span class="timeline__stepName">
+Une bête de calcul
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/14612-les-conditions" class="timeline__step" title="Les conditions">
+<span class="timeline__stepName">
+Les conditions
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/14722-les-boucles" class="timeline__step" title="Les boucles">
+<span class="timeline__stepName">
+Les boucles
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/14828-tp-plus-ou-moins-votre-premier-jeu" class="timeline__step" title="TP : Plus ou Moins, votre premier jeu">
+<span class="timeline__stepName">
+TP : Plus ou Moins, votre premier jeu
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/14997-les-fonctions" class="timeline__step" title="Les fonctions">
+<span class="timeline__stepName">
+Les fonctions
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/exercises/172" class="timeline__step" title="Quiz : Quiz 1">
+<span class="timeline__stepName">
+Quiz : Quiz 1
+</span>
+</a>
+<a class="timeline__step u--cursorAuto">
+<span class="timeline__stepName">
+Activité : Améliorez le jeu du &quot;Plus ou Moins&quot;
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/15212-la-programmation-modulaire" class="timeline__step" title="La programmation modulaire">
+<span class="timeline__stepName">
+La programmation modulaire
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/15417-a-lassaut-des-pointeurs" class="timeline__step" title="À l&#039;assaut des pointeurs">
+<span class="timeline__stepName">
+À l&#039;assaut des pointeurs
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/15540-les-tableaux" class="timeline__step" title="Les tableaux">
+<span class="timeline__stepName">
+Les tableaux
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/15765-les-chaines-de-caracteres" class="timeline__step" title="Les chaînes de caractères">
+<span class="timeline__stepName">
+Les chaînes de caractères
+ </span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/15954-le-preprocesseur" class="timeline__step" title="Le préprocesseur">
+<span class="timeline__stepName">
+Le préprocesseur
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/16119-creez-vos-propres-types-de-variables" class="timeline__step" title="Créez vos propres types de variables">
+<span class="timeline__stepName">
+Créez vos propres types de variables
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/16421-lire-et-ecrire-dans-des-fichiers" class="timeline__step" title="Lire et écrire dans des fichiers">
+<span class="timeline__stepName">
+Lire et écrire dans des fichiers
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/16595-lallocation-dynamique" class="timeline__step" title="L&#039;allocation dynamique">
+<span class="timeline__stepName">
+L&#039;allocation dynamique
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/16828-tp-realisation-dun-pendu" class="timeline__step" title="TP : réalisation d&#039;un Pendu">
+<span class="timeline__stepName">
+TP : réalisation d&#039;un Pendu
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/16993-la-saisie-de-texte-securisee" class="timeline__step" title="La saisie de texte sécurisée">
+<span class="timeline__stepName">
+La saisie de texte sécurisée
+</span>
+</a>
+ <a href="/fr/courses/19980-apprenez-a-programmer-en-c/exercises/174" class="timeline__step" title="Quiz : Quiz 2">
+<span class="timeline__stepName">
+Quiz : Quiz 2
+</span>
+</a>
+<a class="timeline__step u--cursorAuto">
+<span class="timeline__stepName">
+Activité : Expliquez-moi les pointeurs
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/17117-installation-de-la-sdl" class="timeline__step" title="Installation de la SDL">
+<span class="timeline__stepName">
+Installation de la SDL
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/17546-creation-dune-fenetre-et-de-surfaces" class="timeline__step" title="Création d&#039;une fenêtre et de surfaces">
+<span class="timeline__stepName">
+Création d&#039;une fenêtre et de surfaces
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/17796-afficher-des-images" class="timeline__step" title="Afficher des images">
+<span class="timeline__stepName">
+Afficher des images
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/18176-la-gestion-des-evenements" class="timeline__step" title="La gestion des événements">
+<span class="timeline__stepName">
+La gestion des événements
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/18709-tp-mario-sokoban" class="timeline__step" title="TP : Mario Sokoban">
+<span class="timeline__stepName">
+TP : Mario Sokoban
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/18902-maitrisez-le-temps" class="timeline__step" title="Maîtrisez le temps !">
+<span class="timeline__stepName">
+Maîtrisez le temps !
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19160-ecrire-du-texte-avec-sdl-ttf" class="timeline__step" title="Écrire du texte avec SDL_ttf">
+<span class="timeline__stepName">
+Écrire du texte avec SDL_ttf
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19432-jouer-du-son-avec-fmod" class="timeline__step" title="Jouer du son avec FMOD">
+<span class="timeline__stepName">
+Jouer du son avec FMOD
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19556-tp-visualisation-spectrale-du-son" class="timeline__step" title="TP : visualisation spectrale du son">
+<span class="timeline__stepName">
+TP : visualisation spectrale du son
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/exercises/176" class="timeline__step" title="Quiz : Quiz 3">
+<span class="timeline__stepName">
+Quiz : Quiz 3
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19733-les-listes-chainees" class="timeline__step" title="Les listes chaînées">
+<span class="timeline__stepName">
+Les listes chaînées
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19868-les-piles-et-les-files" class="timeline__step js-current-timeline-step" title="Les piles et les files">
+<span class="timeline__stepName">
+Les piles et les files
+</span>
+<span class="timeline__progressMarker"></span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19978-les-tables-de-hachage" class="timeline__step" title="Les tables de hachage">
+<span class="timeline__stepName">
+Les tables de hachage
+</span>
+</a>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/exercises/177" class="timeline__step" title="Quiz : Quiz 4">
+<span class="timeline__stepName">
+Quiz : Quiz 4
+</span>
+</a>
+<span class="timeline__splitChapter"></span>
+</div>
+<span class="timeline__iconContainer">
+<a href="/fr/courses/19980/certificate_example" title="Certificat de réussite (voir un exemple)" class="roundIcon timeline__roundIcon">
+<i class="icon-trophy roundIcon__icon"></i>
+</a>
+</span>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="contentWithSidebar  spacer  js-contentWithSidebar  grid-inner-content">
+<div class="contentWithSidebar__content">
+<div class="relative js-sidebar-container">
+<div class="static">
+<h2 itemprop="name" data-part-title="Les piles et les files" class="part-title">Les piles et les files</h2>
+<section class="space-bottom js-desktop-sticky-container">
+<div class="tooltipMessage tooltipMessage--noArrow">
+<i class="tooltipMessage__icon  icon-lock"></i>
+<a href="/fr/login">Connectez-vous</a> ou <a href="/fr/register">inscrivez-vous</a> gratuitement pour bénéficier de toutes les fonctionnalités de ce cours !
+</div>
+<div itemprop="articleBody" data-page-indentifier="/fr/courses/19980-apprenez-a-programmer-en-c/19868-les-piles-et-les-files" class="js-isRestrictablePage js-course-container js-smilize " data-video-blocked-wrapper="<a href='/fr/login#popin-log-in' class='js-popin-activator'>">
+<div class="userContent js-userContent">
+<p id="r-2193532" data-claire-element-id="2425446">Nous avons découvert avec les listes chaînées un nouveau moyen plus souple que les tableaux pour stocker des données. Ces listes sont particulièrement flexibles car on peut insérer et supprimer des données à n'importe quel endroit, à n'importe quel moment.</p><p id="r-2193533" data-claire-element-id="2425447">Les piles et les files que nous allons découvrir ici sont deux variantes un peu particulières des listes chaînées. Elles permettent de contrôler la manière dont sont ajoutés les nouveaux éléments. Cette fois, on ne va plus insérer de nouveaux éléments au milieu de la liste mais seulement au début ou à la fin.</p><p id="r-2193534" data-claire-element-id="2425448">Les piles et les files sont très utiles pour des programmes qui doivent traiter des données qui arrivent au fur et à mesure. Nous allons voir en détails leur fonctionnement dans ce chapitre.</p><p id="r-2193535" data-claire-element-id="2425449">Les piles et les files sont très similaires, mais révèlent néanmoins une subtile différence que vous allez rapidement reconnaître. Nous allons dans un premier temps découvrir les piles qui vont d'ailleurs beaucoup vous rappeler les listes chaînées, à quelques mots de vocabulaire près.</p><p id="r-2193536" data-claire-element-id="2425450">Globalement, ce chapitre sera simple pour vous si vous avez compris le fonctionnement des listes chaînées. Si ce n'est pas le cas, retournez d'abord au chapitre précédent car nous allons en avoir besoin.</p><h3 id="r-19818" data-claire-element-id="7780368">Les piles</h3><p id="r-2193537" data-claire-element-id="2425451">Imaginez une pile de pièces (fig. suivante). Vous pouvez ajouter des pièces une à une en haut de la pile, mais aussi en enlever depuis le haut de la pile. Il est en revanche impossible d'enlever une pièce depuis le bas de la pile. Si vous voulez essayer, bon courage !</p><figure id="r-2193540" data-claire-element-id="7780356"><img id="r-2193538" data-claire-element-id="2425452" src="https://user.oc-static.com/files/379001_380000/379558.png" alt="Une pile de pièces" /></figure><h4 id="r-2193579" data-claire-element-id="7780367">Fonctionnement des piles</h4><p id="r-2193541" data-claire-element-id="7525663">Le principe des piles en programmation est de stocker des données au fur et à mesure les unes au-dessus des autres pour pouvoir les récupérer plus tard. Par exemple, imaginons une pile de nombres entiers de type<code data-claire-semantic="text">int</code>(fig. suivante). Si j'ajoute un élément (on parle d'<strong>empilage</strong>), il sera placé au-dessus, comme dans Tetris (fig. suivante).</p><figure id="r-2193544" data-claire-element-id="7780358"><img id="r-2193542" data-claire-element-id="2425456" src="https://user.oc-static.com/files/379001_380000/379559.png" alt="Une pile de int" /></figure><figure id="r-2193547" data-claire-element-id="7780360"><img id="r-2193545" data-claire-element-id="2425459" src="https://user.oc-static.com/files/379001_380000/379560.png" alt="Empilage" /></figure><p id="r-2193548" data-claire-element-id="2425462">Le plus intéressant est sans conteste l'opération qui consiste à extraire les nombres de la pile. On parle de <strong>dépilage</strong>. On récupère les données une à une, en commençant par la dernière qui vient d'être posée tout en haut de la pile (fig. suivante). On enlève les données au fur et à mesure, jusqu'à la dernière tout en bas de la pile.</p><figure id="r-2193551" data-claire-element-id="7780362"><img id="r-2193549" data-claire-element-id="2425463" src="https://user.oc-static.com/files/379001_380000/379561.png" alt="Dépilage" /></figure><p id="r-2193552" data-claire-element-id="2425466">On dit que c'est un algorithme <strong>LIFO</strong>, ce qui signifie « Last In First Out ». Traduction : « Le dernier élément qui a été ajouté est le premier à sortir ».</p><p id="r-2193553" data-claire-element-id="7525670">Les éléments de la pile sont reliés entre eux à la manière d'une liste chaînée. Ils possèdent un pointeur vers l'élément suivant et ne sont donc pas forcément placés côte à côte en mémoire. Le dernier élément (tout en bas de la pile) doit pointer vers<code data-claire-semantic="text">NULL</code>pour indiquer qu'on a… touché le fond (fig. suivante).</p><figure id="r-2193556" data-claire-element-id="7780364"><img id="r-2193554" data-claire-element-id="2425468" src="https://user.oc-static.com/files/379001_380000/379562.png" alt="Les éléments sont reliés entre eux et le dernier pointe vers NULL" /></figure><div id="r-2193558" data-claire-element-id="2425472" data-claire-semantic="question"><p id="r-2193557" data-claire-element-id="2425471">À quoi est-ce que tout cela peut bien servir, concrètement ?</p></div><p id="r-2193559" data-claire-element-id="2425473">Il y a des programmes où vous avez besoin de stocker des données temporairement pour les ressortir dans un ordre précis : le dernier élément que vous avez stocké doit être le premier à ressortir.</p><p id="r-2193560" data-claire-element-id="2425474">Pour vous donner un exemple concret, votre système d'exploitation utilise ce type d'algorithme pour retenir l'ordre dans lequel les fonctions ont été appelées. Imaginez un exemple :</p><ol id="r-2193573" data-claire-element-id="7525685"><li id="r-2193562" data-claire-element-id="7525674"><p id="r-2193561" data-claire-element-id="7525673">votre programme commence par la fonction<code data-claire-semantic="text">main</code>(comme toujours) ;</p></li><li id="r-2193564" data-claire-element-id="7525676"><p id="r-2193563" data-claire-element-id="7525675">vous y appelez la fonction<code data-claire-semantic="text">jouer</code>;</p></li><li id="r-2193566" data-claire-element-id="7525678"><p id="r-2193565" data-claire-element-id="7525677">cette fonction<code data-claire-semantic="text">jouer</code>fait appel à son tour à la fonction<code data-claire-semantic="text">charger</code>;</p></li><li id="r-2193568" data-claire-element-id="7525680"><p id="r-2193567" data-claire-element-id="7525679">une fois que la fonction<code data-claire-semantic="text">charger</code>est terminée, on retourne à la fonction<code data-claire-semantic="text">jouer</code>;</p></li><li id="r-2193570" data-claire-element-id="7525682"><p id="r-2193569" data-claire-element-id="7525681">une fois que la fonction<code data-claire-semantic="text">jouer</code>est terminée, on retourne au<code data-claire-semantic="text">main</code>;</p></li><li id="r-2193572" data-claire-element-id="7525684"><p id="r-2193571" data-claire-element-id="7525683">enfin, une fois le<code data-claire-semantic="text">main</code>terminé, il n'y a plus de fonction à appeler, le programme s'achève.</p></li></ol><p id="r-2193574" data-claire-element-id="2425488">Pour « retenir » l'ordre dans lequel les fonctions ont été appelées, votre ordinateur crée une pile de ces fonctions au fur et à mesure (fig. suivante).</p><figure id="r-2193577" data-claire-element-id="7780366"><img id="r-2193575" data-claire-element-id="2425489" src="https://user.oc-static.com/files/379001_380000/379563.png" alt="La pile d'appel des fonctions au fur et à mesure du programme" /></figure><p id="r-2193578" data-claire-element-id="7525688">Voilà un exemple concret d'utilisation des piles. Grâce à cette technique, votre ordinateur sait à quelle fonction il doit retourner. Il peut empiler 100 fonctions d'affilée s'il le faut, il retrouvera toujours le<code data-claire-semantic="text">main</code>en bas !</p><h4 id="r-2193615" data-claire-element-id="7525699">Création d'un système de pile</h4><p id="r-2193580" data-claire-element-id="2425494">Maintenant que nous connaissons le principe de fonctionnement des piles, essayons d'en construire une. Comme pour les listes chaînées, il n'existe pas de système de pile intégré au langage C. Il faut donc le créer nous-mêmes.</p><p id="r-2193581" data-claire-element-id="2425495">Chaque élément de la pile aura une structure identique à celle d'une liste chaînée :</p><pre id="r-2193582" data-claire-element-id="2829517"><code data-claire-semantic="c">typedef struct Element Element;
+struct Element
+{
+    int nombre;
+    Element *suivant;
+};</code></pre><p id="r-2193583" data-claire-element-id="2425497">La structure de contrôle contiendra l'adresse du premier élément de la pile, celui qui se trouve tout en haut :</p><pre id="r-2193584" data-claire-element-id="2829518"><code data-claire-semantic="c">typedef struct Pile Pile;
+struct Pile
+{
+    Element *premier;
+};</code></pre><p id="r-2193585" data-claire-element-id="2425499">Nous aurons besoin en tout et pour tout des fonctions suivantes :</p><ul id="r-2193590" data-claire-element-id="2425504"><li id="r-2193587" data-claire-element-id="2425501"><p id="r-2193586" data-claire-element-id="2425500">empilage d'un élément ;</p></li><li id="r-2193589" data-claire-element-id="2425503"><p id="r-2193588" data-claire-element-id="2425502">dépilage d'un élément.</p></li></ul><p id="r-2193591" data-claire-element-id="2425505">Vous noterez que, contrairement aux listes chaînées, on ne parle pas d'ajout ni de suppression. On parle d'empilage et de dépilage car ces opérations sont limitées à un élément précis, comme on l'a vu. Ainsi, on ne peut ajouter et retirer un élément qu'en haut de la pile.</p><p id="r-2193592" data-claire-element-id="2425506">On pourra aussi écrire une fonction d'affichage de la pile, pratique pour vérifier si notre programme se comporte correctement.</p><p id="r-2193593" data-claire-element-id="2425507">Allons-y !</p><h5 id="r-2193597" data-claire-element-id="7525692">Empilage</h5><p id="r-2193594" data-claire-element-id="7525690">Notre fonction<code data-claire-semantic="text">empiler</code>doit prendre en paramètre la structure de contrôle de la pile (de type<code data-claire-semantic="text">Pile</code>) ainsi que le nouveau nombre à stocker.<br /> Je vous rappelle que nous stockons ici des<code data-claire-semantic="text">int</code>, mais rien ne vous empêche d'adapter ces exemples avec un autre type de données. On peut stocker n'importe quoi : des<code data-claire-semantic="text">double</code>, des<code data-claire-semantic="text">char</code>, des chaînes, des tableaux ou même d'autres structures !</p><pre id="r-2193595" data-claire-element-id="2829519"><code data-claire-semantic="c">void empiler(Pile *pile, int nvNombre)
+{
+    Element *nouveau = malloc(sizeof(*nouveau));
+    if (pile == NULL || nouveau == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    nouveau-&gt;nombre = nvNombre;
+    nouveau-&gt;suivant = pile-&gt;premier;
+    pile-&gt;premier = nouveau;
+}</code></pre><p id="r-2193596" data-claire-element-id="7525691">L'ajout se fait en début de pile car, comme on l'a vu, il est impossible de le faire au milieu d'une pile. C'est le principe même de son fonctionnement, on ajoute toujours par le haut.<br /> De ce fait, contrairement aux listes chaînées, on ne doit pas créer de fonction pour insérer un élément au milieu de la pile. Seule la fonction<code data-claire-semantic="text">empiler</code>permet d'ajouter un élément.</p><h5 id="r-2193603" data-claire-element-id="7525695">Dépilage</h5><p id="r-2193598" data-claire-element-id="2425512">Le rôle de la fonction de dépilage est de supprimer l'élément tout en haut de la pile, ça, vous vous en doutiez. Mais elle doit aussi retourner l'élément qu'elle dépile, c'est-à-dire dans notre cas le nombre qui était stocké en haut de la pile.</p><p id="r-2193599" data-claire-element-id="2425513">C'est comme cela que l'on accède aux éléments d'une pile : en les enlevant un à un. On ne parcourt pas la pile pour aller y chercher le second ou le troisième élément. On demande toujours à récupérer le premier.</p><p id="r-2193600" data-claire-element-id="7525693">Notre fonction<code data-claire-semantic="text">depiler</code>va donc retourner un<code data-claire-semantic="text">int</code>correspondant au nombre qui se trouvait en tête de pile :</p><pre id="r-2193601" data-claire-element-id="2829521"><code data-claire-semantic="c">int depiler(Pile *pile)
+{
+    if (pile == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    int nombreDepile = 0;
+    Element *elementDepile = pile-&gt;premier;
+
+    if (pile != NULL &amp;&amp; pile-&gt;premier != NULL)
+    {
+        nombreDepile = elementDepile-&gt;nombre;
+        pile-&gt;premier = elementDepile-&gt;suivant;
+        free(elementDepile);
+    }
+
+    return nombreDepile;
+}</code></pre><p id="r-2193602" data-claire-element-id="7525694">On récupère le nombre en tête de pile pour le renvoyer à la fin de la fonction. On modifie l'adresse du premier élément de la pile, puisque celui-ci change. Enfin, bien entendu, on supprime l'ancienne tête de pile grâce à<code data-claire-semantic="text">free</code>.</p><h5 id="r-2193614" data-claire-element-id="7525698">Affichage de la pile</h5><p id="r-2193604" data-claire-element-id="7525696">Bien que cette fonction ne soit pas indispensable (les fonctions<code data-claire-semantic="text">empiler</code>et<code data-claire-semantic="text">depiler</code>suffisent à gérer une pile !), elle va nous être utile pour tester le fonctionnement de notre pile et surtout pour « visualiser » le résultat.</p><pre id="r-2193605" data-claire-element-id="2829523"><code data-claire-semantic="c">void afficherPile(Pile *pile)
+{
+    if (pile == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+    Element *actuel = pile-&gt;premier;
+
+    while (actuel != NULL)
+    {
+        printf(&quot;%d\n&quot;, actuel-&gt;nombre);
+        actuel = actuel-&gt;suivant;
+    }
+
+    printf(&quot;\n&quot;);
+}</code></pre><p id="r-2193606" data-claire-element-id="2425520">Cette fonction étant ridiculement simple, elle ne nécessite aucune explication (et toc !).</p><p id="r-2193607" data-claire-element-id="7525697">En revanche, c'est le moment de faire un<code data-claire-semantic="text">main</code>pour tester le comportement de notre pile :</p><pre id="r-2193608" data-claire-element-id="2829524"><code data-claire-semantic="c">int main()
+{
+    Pile *maPile = initialiser();
+
+    empiler(maPile, 4);
+    empiler(maPile, 8);
+    empiler(maPile, 15);
+    empiler(maPile, 16);
+    empiler(maPile, 23);
+    empiler(maPile, 42);
+
+    printf(&quot;\nEtat de la pile :\n&quot;);
+    afficherPile(maPile);
+
+    printf(&quot;Je depile %d\n&quot;, depiler(maPile));
+    printf(&quot;Je depile %d\n&quot;, depiler(maPile));
+
+    printf(&quot;\nEtat de la pile :\n&quot;);
+    afficherPile(maPile);
+
+    return 0;
+}</code></pre><p id="r-2193609" data-claire-element-id="2425523">On affiche l'état de la pile après plusieurs empilages et une autre fois après quelques dépilages. On affiche aussi le nombre qui est dépilé à chaque fois que l'on dépile. Le résultat dans la console est le suivant :</p><pre id="r-2193610" data-claire-element-id="2425524"><samp>Etat de la pile :
+42
+23
+16
+15
+8
+4
+
+Je depile 42
+Je depile 23
+
+Etat de la pile :
+16
+15
+8
+4</samp></pre><p id="r-2193611" data-claire-element-id="2425525">Vérifiez que vous voyez bien ce qui se passe dans ce programme. Si vous comprenez cela, vous avez compris le fonctionnement des piles !</p><p id="r-2193612" data-claire-element-id="2425526">Vous pouvez télécharger le projet complet des piles si vous le désirez.</p><p id="r-2193613" data-claire-element-id="2425527"><strong><a href="http://www.siteduzero.com/uploads/fr/ftp/mateo21/c/piles.zip">Télécharger le projet complet des piles</a></strong></p><h3 id="r-19867" data-claire-element-id="7780374">Les files</h3><p id="r-2193616" data-claire-element-id="2425531">Les files ressemblent assez aux piles, si ce n'est qu'elles fonctionnent dans le sens inverse !</p><h4 id="r-2193628" data-claire-element-id="7780373">Fonctionnement des files</h4><p id="r-2193617" data-claire-element-id="2425532">Dans ce système, les éléments s'entassent les uns à la suite des autres. Le premier qu'on fait sortir de la file est le premier à être arrivé. On parle ici d'algorithme <strong>FIFO</strong> (First In First Out), c'est-à-dire « Le premier qui arrive est le premier à sortir ».</p><p id="r-2193618" data-claire-element-id="2425533">Il est facile de faire le parallèle avec la vie courante. Quand vous allez prendre un billet de cinéma, vous faites la queue au guichet (fig. suivante). À moins d'être le frère du guichetier, vous allez devoir faire la queue comme tout le monde et attendre derrière. C'est le premier arrivé qui sera le premier servi.</p><figure id="r-2193621" data-claire-element-id="7780370"><img id="r-2193619" data-claire-element-id="2425534" src="https://user.oc-static.com/files/379001_380000/379564.png" alt="Une file d'attente. Le premier arrivé est le premier servi" /></figure><p id="r-2193622" data-claire-element-id="2425537">En programmation, les files sont utiles pour mettre en attente des informations dans l'ordre dans lequel elles sont arrivées. Par exemple, dans un logiciel de <em>chat</em> (type messagerie instantanée), si vous recevez trois messages à peu de temps d'intervalle, vous les enfilez les uns à la suite des autres en mémoire. Vous vous occupez alors du premier message arrivé pour l'afficher à l'écran, puis vous passez au second, et ainsi de suite.</p><p id="r-2193623" data-claire-element-id="7525703">Les événements que vous envoie la bibliothèque SDL que nous avons étudiée sont eux aussi stockés dans une file. Si vous bougez la souris, un événement sera généré pour chaque pixel dont s'est déplacé le curseur de la souris. La SDL les stocke dans une file puis vous les envoie un à un à chaque fois que vous faites appel à<code data-claire-semantic="text">SDL_PollEvent</code>(ou à<code data-claire-semantic="text">SDL_WaitEvent</code>: oui, c'est bien ! Je vois que ça suit au fond de la classe. ;) ).</p><p id="r-2193624" data-claire-element-id="7525704">En C, une file est une liste chaînée où chaque élément pointe vers le suivant, tout comme les piles. Le dernier élément de la file pointe vers<code data-claire-semantic="text">NULL</code>(fig. suivante).</p><figure id="r-2193627" data-claire-element-id="7780372"><img id="r-2193625" data-claire-element-id="2425540" src="https://user.oc-static.com/files/379001_380000/379565.png" alt="Représentation d'une file" /></figure><h4 id="r-2193646" data-claire-element-id="7525715">Création d'un système de file</h4><p id="r-2193629" data-claire-element-id="2425544">Le système de file va ressembler à peu de choses près aux piles. Il y a seulement quelques petites subtilités étant donné que les éléments sortent de la file dans un autre sens, mais rien d'insurmontable si vous avez compris les piles.</p><p id="r-2193630" data-claire-element-id="7525708">Nous allons créer une structure<code data-claire-semantic="text">Element</code>et une structure de contrôle<code data-claire-semantic="text">File</code>:</p><pre id="r-2193631" data-claire-element-id="2829533"><code data-claire-semantic="c">typedef struct Element Element;
+struct Element
+{
+    int nombre;
+    Element *suivant;
+};
+
+typedef struct File File;
+struct File
+{
+    Element *premier;
+};</code></pre><p id="r-2193632" data-claire-element-id="7525709">Comme pour les piles, chaque élément de la file sera de type<code data-claire-semantic="text">Element</code>. À l'aide du pointeur<code data-claire-semantic="text">premier</code>, nous disposerons toujours du premier élément et nous pourrons remonter jusqu'au dernier.</p><h5 id="r-2193642" data-claire-element-id="7525714">Enfilage</h5><p id="r-2193633" data-claire-element-id="2425548">La fonction qui ajoute un élément à la file est appelée fonction « d'enfilage ». Il y a deux cas à gérer :</p><ul id="r-2193638" data-claire-element-id="7525712"><li id="r-2193635" data-claire-element-id="7525711"><p id="r-2193634" data-claire-element-id="7525710">soit la file est vide, dans ce cas on doit juste créer la file en faisant pointer<code data-claire-semantic="text">premier</code>vers le nouvel élément créé ;</p></li><li id="r-2193637" data-claire-element-id="2425552"><p id="r-2193636" data-claire-element-id="2425551">soit la file n'est pas vide, dans ce cas il faut parcourir toute la file en partant du premier élément jusqu'à arriver au dernier. On rajoutera notre nouvel élément après le dernier.</p></li></ul><p id="r-2193639" data-claire-element-id="2425554">Voici comment on peut faire dans la pratique :</p><pre id="r-2193640" data-claire-element-id="2829534"><code data-claire-semantic="c">void enfiler(File *file, int nvNombre)
+{
+    Element *nouveau = malloc(sizeof(*nouveau));
+    if (file == NULL || nouveau == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    nouveau-&gt;nombre = nvNombre;
+    nouveau-&gt;suivant = NULL;
+
+    if (file-&gt;premier != NULL) /* La file n'est pas vide */
+    {
+        /* On se positionne à la fin de la file */
+        Element *elementActuel = file-&gt;premier;
+        while (elementActuel-&gt;suivant != NULL)
+        {
+            elementActuel = elementActuel-&gt;suivant;
+        }
+        elementActuel-&gt;suivant = nouveau;
+    }
+    else /* La file est vide, notre élément est le premier */
+    {
+        file-&gt;premier = nouveau;
+    }
+}</code></pre><p id="r-2193641" data-claire-element-id="7525713">Vous voyez dans ce code le traitement des deux cas possibles, chacun devant être géré à part. La différence par rapport aux piles, qui rajoute une petite touche de difficulté, est qu'il faut se placer à la fin de la file pour ajouter le nouvel élément. Mais bon, un petit<code data-claire-semantic="text">while</code>et le tour est joué, comme vous pouvez le constater. :-)</p><h5 id="r-2193645" data-claire-element-id="2829537">Défilage</h5><p id="r-2193643" data-claire-element-id="2425558">Le défilage ressemble étrangement au dépilage. Étant donné qu'on possède un pointeur vers le premier élément de la file, il nous suffit de l'enlever et de renvoyer sa valeur.</p><pre id="r-2193644" data-claire-element-id="2829536"><code data-claire-semantic="c">int defiler(File *file)
+{
+    if (file == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    int nombreDefile = 0;
+
+    /* On vérifie s'il y a quelque chose à défiler */
+    if (file-&gt;premier != NULL)
+    {
+        Element *elementDefile = file-&gt;premier;
+
+        nombreDefile = elementDefile-&gt;nombre;
+        file-&gt;premier = elementDefile-&gt;suivant;
+        free(elementDefile);
+    }
+
+    return nombreDefile;
+}</code></pre><h4 id="r-2193653" data-claire-element-id="7525720">À vous de jouer !</h4><p id="r-2193647" data-claire-element-id="7525716">Il resterait à écrire une fonction<code data-claire-semantic="text">afficherFile</code>, comme on l'avait fait pour les piles. Cela vous permettrait de vérifier si votre file se comporte correctement.</p><p id="r-2193648" data-claire-element-id="7525717">Réalisez ensuite un<code data-claire-semantic="text">main</code>pour faire tourner votre programme. Vous devriez pouvoir obtenir un rendu similaire à ceci :</p><pre id="r-2193649" data-claire-element-id="2425564"><samp>Etat de la file :
+4 8 15 16 23 42
+
+Je defile 4
+Je defile 8
+
+Etat de la file :
+15 16 23 42</samp></pre><p id="r-2193650" data-claire-element-id="7525718">À terme, vous devriez pouvoir créer votre propre bibliothèque de files, avec des fichiers<code data-claire-semantic="text">file.h</code>et<code data-claire-semantic="text">file.c</code>par exemple.</p><p id="r-2193651" data-claire-element-id="7525719">Je vous propose de télécharger le projet complet de gestion des files, si vous le désirez. Il inclut la fonction<code data-claire-semantic="text">afficherFile</code>.</p><p id="r-2193652" data-claire-element-id="2425567"><strong><a href="http://www.siteduzero.com/uploads/fr/ftp/mateo21/c/files.zip">Télécharger le projet complet des files</a></strong></p><h4 id="r-2193663" data-claire-element-id="7525724">En résumé</h4><ul id="r-2193662" data-claire-element-id="7525723"><li id="r-2193655" data-claire-element-id="2425570"><p id="r-2193654" data-claire-element-id="2425569">Les piles et les files permettent d'organiser en mémoire des données qui arrivent au fur et à mesure.</p></li><li id="r-2193657" data-claire-element-id="2425572"><p id="r-2193656" data-claire-element-id="2425571">Elles utilisent un système de liste chaînée pour assembler les éléments.</p></li><li id="r-2193659" data-claire-element-id="2425574"><p id="r-2193658" data-claire-element-id="2425573">Dans le cas des piles, les données s'ajoutent les unes au-dessus des autres. Lorsqu'on extrait une donnée, on récupère la dernière qui vient d'être ajoutée (la plus récente). On parle d'algorithme LIFO (<em>Last In First Out</em>).</p></li><li id="r-2193661" data-claire-element-id="7525722"><p id="r-2193660" data-claire-element-id="7525721">Dans le cas des files, les données s'ajoutent les unes à la suite des autres. On extrait la première donnée à avoir été ajoutée dans la file (la plus ancienne). On parle d'algorithme FIFO (<em>First In First Out</em>).</p></li></ul>
+</div>
+<div class="js-courseSelementActions sideActions">
+<ul class="sideActions__container">
+<li>
+<a class="sideActions__item  js-courseElementActions-copyUrl  js-tooltip" href="#" data-tooltip="Copier le lien" data-tooltip-done="Lien copié !">
+#
+</a>
+</li>
+</ul>
+</div>
+</div>
+<nav id="course-pagination" class="course-pagination    clearfix">
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19733-les-listes-chainees" class="button button--secondary  course-pagination__btn course-pagination__btn--previous">
+<i class="icon-previous"></i>
+<span>Les listes chaînées</span>
+</a>
+<span class="course-pagination__separator"></span>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19978-les-tables-de-hachage" class="button button--secondary  course-pagination__btn course-pagination__btn--next">
+<span>Les tables de hachage</span>
+<i class="icon-next"></i>
+</a>
+</nav>
+<div tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="popin-view-restriction_popin_title" class="popin popin--illustrated  js-popin" id="popin-view-restriction">
+<button class="popin__close-button  js-close-button" title="Fermer" aria-label="Fermer">
+<i class="icon-close" aria-hidden="true"></i>
+</button>
+<div class="popin__inner">
+<div class="popin__illustrationWrapper">
+<div class="popin__illustration illustration--balloon"></div>
+</div>
+<div class="popin__mainContainer">
+<div class="popin__gigTitleContainer js-popin-title">
+<div class="gigWorkersPopin__timeline">
+<div class="gigWorkersPopin__dot">1</div>
+<div class="gigWorkersPopin__line"></div>
+<div class="gigWorkersPopin__dot gigWorkersPopin__dot--disabled">2</div>
+</div>
+<div id="popin-view-restriction_popin_title" class="popin__title">Créez un compte <br /> OpenClassrooms</div>
+</div>
+<div id="popin-view-restriction_popin_title" class="popin__title  js-popin-title">Waouh !</div>
+<div class="popin__content  js-popin-content">
+<div class="popin__contentWrapper">
+<p>
+Très heureux de voir que nos cours vous plaisent, déjà 5 pages lues aujourd&#039;hui ! Vous pouvez continuer la lecture de nos cours en devenant un membre de la communauté d&#039;OpenClassrooms. C&#039;est gratuit !
+</p>
+<p>
+Vous pourrez aussi suivre votre avancement dans le cours, faire les exercices et discuter avec les autres membres.
+</p>
+</div>
+</div>
+<div class="popin__actions  js-popin-actions">
+<span class="u--inlineBlock">
+<a class="button button--primary " href="/fr/register">S'inscrire</a>
+</span>
+<span class="u--inlineBlock">
+<a class="button button--secondary " href="/fr/login">Se connecter</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div id="popin-not-certifying-yet_46443" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='/fr/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+<img alt="Exemple de certificat de réussite" src="//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+<div id="popin-not-certifying-yet_920411" class="popin" data-popin-title="Vous ne pouvez pas encore obtenir de certificat de réussite à l&#039;issue de ce cours.
+                            <a href='/fr/premium'><i class='icon-star'></i> Devenez Premium</a>
+                    ">
+<img alt="Exemple de certificat de réussite" src="//static.oc-static.com/prod/images/courses/certif.jpg" />
+</div>
+</div>
+<aside id="content-with-sidebar" class="contentWithSidebar__sidebar  js-contentWithSidebar-slidingElement">
+<nav class="col-nav">
+<div id="tab-courseMenu" class="col-nav__inner js-sidebar-inner">
+<div class="col-nav__block  col-nav__block--summary">
+<div class="side-paginate">
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19733-les-listes-chainees" class="side-paginate__previous" title="Chapitre précédent">
+<i class="icon-previous"></i>
+</a>
+<span class="side-paginate__separator"></span>
+<h6 class="side-paginate__title">
+Les structures de données
+</h6>
+<span class="side-paginate__separator"></span>
+<a href="/fr/courses/19980-apprenez-a-programmer-en-c/19978-les-tables-de-hachage" class="side-paginate__next" title="Chapitre suivant">
+<i class="icon-next"></i>
+</a>
+</div>
+<div class="col-nav__block--summary-list">
+<ol class="col-nav__chapters">
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/19980-apprenez-a-programmer-en-c/19733-les-listes-chainees">Les listes chaînées</a>
+</li>
+ <li class="selected">
+<span class="col-nav__chapterTitle">Les piles et les files</span>
+</li>
+<li class="">
+<a class="col-nav__chapterTitle" href="/fr/courses/19980-apprenez-a-programmer-en-c/19978-les-tables-de-hachage">Les tables de hachage</a>
+</li>
+</ol>
+<div class="tocExercise"><ul class="tocExercise__list"><li class="tocExercise__item "><a class="tocExercise__link " href="/fr/courses/19980-apprenez-a-programmer-en-c/exercises/177"><i class="tocExercise__icon icon-lock"></i><span class="tocExercise__text">Quiz : Quiz 4</span></a></li></ul></div> </div>
+</div>
+<div class="col-nav__block col-nav__block--button">
+<a href="/forum/categorie/langage-c" class="button button--secondary">
+Accéder au forum
+</a>
+</div>
+<div class="col-nav__block col-nav__block--institution">
+<div class="col-nav__title">Avec le soutien de</div>
+<a href="/fr/partners/in-tech" target="_blank">
+<span data-image-cdn-attr-src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/partners/7/14520032413711_logo-intechinfo.png" data-image-cdn-attr-alt="logo IN&#039;TECH" data-image-cdn-width="165" data-image-cdn-attr-class="col-nav__institutionLogo"><img class="col-nav__institutionLogo" width="165" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" /></span>
+<p class="col-nav__block--institutionDescription">
+Devenez expert en ingénierie informatique
+</p>
+</a>
+</div>
+<div class="socialNetwork col-nav__block">
+<ul class="socialButtons  js-socialButtons" data-options="
+                title: 'Les piles et les files @OCFrance',
+        mailTitle: 'Cours &quot;Les piles et les files&quot; sur OpenClassrooms',
+        mailContent: 'Découvrez le cours &quot;Les piles et les files&quot; sur OpenClassrooms.'">
+<li>
+<a class="roundIcon  roundIcon--twitter addthis_button_twitter  js-socialButtons-btn" data-tooltip="Partagez sur Twitter">
+<i class="roundIcon__icon  icon-twitter"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  roundIcon--facebook  addthis_button_facebook  js-socialButtons-btn" data-tooltip="Partagez sur Facebook">
+<i class="roundIcon__icon  icon-facebook"></i>
+</a>
+</li>
+<li>
+<a class="roundIcon  addthis_button_email  js-socialButtons-btn  js-socialButtons-email" data-tooltip="Partagez par e-mail">
+<i class="roundIcon__icon  icon-letter"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</aside>
+</div>
+</div>
+</div>
+<footer id="course-footer" class="alt-section noMarginBottom">
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="grid-inner-content  courseFooter">
+<div class="courseFooter__authors course-bottom__category">
+<div class="course-bottom__title">
+Le professeur
+</div>
+<div>
+<a itemprop="author" itemscope itemtype="http://schema.org/Person" href="/fr/membres/mateo21" class="no-underlined" rel="nofollow">
+<div class="course-bottom__text-illustrated">
+<span data-author="Mathieu Nebra" data-image-cdn-background-image="https://sdz-upload.s3.amazonaws.com/prod/users/avatars/Mathieu_Nebra-2.jpg" data-image-cdn-width="120"></span>
+<div class="course-bottom__subtitle" itemprop="name">Mathieu Nebra</div>
+<p itemprop="description">
+Entrepreneur à plein temps, auteur à plein temps et co-fondateur d&#039;OpenClassrooms :o)
+</p>
+</div>
+</a>
+</div>
+</div>
+<div class="courseFooter__courseFormat course-bottom__category">
+<h2>Découvrez aussi ce cours en...</h2>
+<ul class="course-bottom__format">
+<li>
+<a href="http://www.eyrolles.com/Informatique/Livre/apprenez-a-programmer-en-c-2e-edition-9791090085879?societe=openclassrooms" target="_blank" class="text-decoration-none">
+<div class="circle circle--x-small">
+<span class="circle__content"></span>
+<i class="icon-book"></i>
+</div>
+<div class="course-bottom__format-entitled">
+Livre
+</div>
+</a>
+</li>
+<li>
+<a href="/fr/old-courses-pdf" class="text-decoration-none">
+<div class="circle circle--x-small">
+<span class="circle__content"></span>
+<i class="icon-pdf"></i>
+</div>
+<div class="course-bottom__format-entitled">
+PDF
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</article>
+</main>
+</div>
+<div id="footerWrapper">
+<footer id="footer" class="oc-footerSkeleton">
+<hr style="margin-bottom: 8px" />
+<div class="grid-wrapper">
+<div class="grid-inner">
+<div class="oc-footerSkeleton__container">
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 80%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 70%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 85%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 60%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<div class="oc-footerSkeleton__itemTitle"><span class="skeleton" style="height: 20px; width: 75%"></span></div>
+<ul class="oc-footerSkeleton__linksList">
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 65%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 50%"></span></a></p>
+</li>
+<li class="oc-footerSkeleton__linksListItem">
+<p><a tabindex="inherit"><span class="skeleton" style="height: 14px; width: 40%"></span></a></p>
+</li>
+</ul>
+</div>
+<div class="oc-footerSkeleton__item">
+<span class="skeleton" style="height: 25px; width: 65%"></span>
+<div class="oc-footerSkeleton__socialButtonWrapper">
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+<div><span class="skeleton skeleton--round" style="width: 40px; height: 40px;"></span></div>
+</div>
+<div><span class="skeleton skeleton--width50" style="height: 40px;"></span></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div id="showDisclaimer" class="cookiesDisclaimer"></div>
+<script type="text/javascript">
+        function getConsentedSegmentIntegrations() {
+            // getCookie from https://www.w3schools.com/js/js_cookies.asp
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            var consent = getCookie('cmapi_cookie_privacy');
+
+            function isCookieAllowedByConsent(consent, level) {
+              return !!consent && consent.search(level) !== -1;
+            }
+
+            var isFunctionalCookieAllowed = isCookieAllowedByConsent(consent, 2);
+            var isAdvertisingCookieAllowed = isCookieAllowedByConsent(consent, 3);
+
+            var isAppCuesPremiumUser = false;
+
+            return {
+                Amplitude: isFunctionalCookieAllowed,
+                'Bing Ads': isAdvertisingCookieAllowed,
+                'Google Ads': isAdvertisingCookieAllowed,
+                'Google Analytics': isFunctionalCookieAllowed,
+                'Zendesk': isFunctionalCookieAllowed,
+                Appcues: isAppCuesPremiumUser && isFunctionalCookieAllowed,
+            };
+        }
+
+        var consentedSegmentIntegrations = getConsentedSegmentIntegrations();
+
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+            window.loadAnalytics = function () { window.analytics.load('mou95e6tdn', {integrations: consentedSegmentIntegrations}) };
+        }}();
+    </script>
+<script>
+  var isPrerender = !!navigator.userAgent.match(/github\.com\/prerender\/prerender/);
+  var preRenderBrowserFakeUa = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163 Safari/537.36";
+  var polyfillUrl = "https://cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=default,es6,IntersectionObserver,Object.values,Array.prototype.includes,Array.prototype.findIndex,Promise.prototype.finally,fetch,Intl.~locale.fr";
+
+    if (isPrerender) {
+    polyfillUrl+= "&ua=" + encodeURIComponent(preRenderBrowserFakeUa);
+  }
+
+  App.scripts.push(polyfillUrl);
+
+  App.script = {
+    SHOP: 'shop',
+    PROJECTS: 'projects',
+    TEAM: 'team',
+    HOME: 'home',
+    COURSE_EDIT: 'course_edit',
+    COURSE_VIEW: 'course_view',
+    ADMIN: 'admin',
+    ADMIN_STUDENT_CREDENTIAL_CREATE: 'adminStudentCredentialCreate',
+    POST_A_JOB: 'postAJob',
+    GIG_WORKERS: 'gigWorkers',
+    JOB_GUARANTEE: 'jobGuarantee',
+    JOB_SURVEY: 'jobSurvey',
+    MCQ_EDIT: 'mcqEdit',
+    MCQ_VIEW: 'mcqView',
+    MENTOR_EDIT: 'mentorEdit',
+    MENTORSHIP_DASHBOARD: 'mentorshipDashboard',
+    MENTORSHIP_SESSION_CREATE: 'mentorshipSessionCreate',
+      MENTORSHIP_SESSION_NON_ASSESSOR_CREATE: 'mentorshipSessionNonAssessorCreate',
+    P2P_EDIT: 'p2pEdit',
+    P2P_VIEW: 'p2pView',
+    PATHS: 'paths',
+    PRIVATE_CONVERSATIONS: 'privateConversations',
+    USER_PROFILE: 'userProfile',
+    WELCOME: 'welcome',
+    APPRENTICESHIP: 'apprenticeship',
+    WEBAPP: 'webapp',
+    PROJECTS_ADMIN: 'projectsAdmin',
+  };
+</script>
+<script>App.scripts.push("/js/runtime.70f2fff9cb90e5524980.js");</script>
+<script>App.scripts.push("/js/vendors.fc1876e54f9253d2c4d5.js");</script>
+<script>App.scripts.push("/js/oc/packages/main.5c24359cd476d1e712fa.js");</script>
+
+<script>App.scriptToLoad = App.script.COURSE_VIEW</script>
+
+<script>
+    (function () {
+        function loadScripts(cb) {
+            App.scripts.forEach(function (src, index) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.body.appendChild(script);
+
+                if (cb && index === App.scripts.length - 1) {
+                    script.onload = cb;
+                }
+            });
+        }
+
+        function boot() {
+            loadScripts(function () {
+                if (App.modules) {
+                    App.modules.startAll();
+                }
+            });
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('load', boot, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', boot);
+        } else {
+            window.onload = boot;
+        }
+    }());
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"90dc06697a","applicationID":"20302107","transactionName":"NANaYkJXC0ICAhdYVw1Je0NDQgpcTA4AblsPB1FEVWkGXhYTEFRnEwdKQm9GBEMXPhVYXRQ=","queueTime":0,"applicationTime":156,"atts":"GERZFApNGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
